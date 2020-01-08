@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios';
 
 
 let char = {
@@ -81,15 +82,28 @@ let char = {
   }
 }
 
+let config = {
+  headers: {
+    'Access-Control-Allow-Origin': true,
+    crossorigin: true
+  }
+};
+
+let char2 = axios.get("https://api.tibiadata.com/v2/characters/Captain+Seasick.json", config);
+console.log(char2)
+console.log('asdasdasdasdasdada')
 
 function App() {
+
+  console.log(char2)
+  console.log('asdasdasdasdasdada')
+
   return (
     <div className="App">
       <header className="App-header">
         <div>
           <input></input><button>Submit</button>
         </div>
-
         <div>Character Information</div>
         <div>Name: {char.characters.data.name}</div>
         <div>Title: {char.characters.data.title}</div>
