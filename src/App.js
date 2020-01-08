@@ -86,6 +86,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>
+          <input></input><button>Submit</button>
+        </div>
+
         <div>Character Information</div>
         <div>Name: {char.characters.data.name}</div>
         <div>Title: {char.characters.data.title}</div>
